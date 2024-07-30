@@ -1,0 +1,99 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>DigiConnect Portfolio</title> 
+
+    <style>
+body {    
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1c063d;
+    color: #fff;
+    height:100%;
+}
+
+.container {
+    display: flex;
+    height:100%;
+}
+.sidebar {
+    width: 200px;
+    height: 1000px;
+    background-color: #6f6278;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+
+.sidebar ul li a {
+    margin: 40px ;
+    cursor: pointer;
+    display: block;
+    color: lightgray;
+    padding: 4px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.sidebar li a:hover {
+    color: white;
+}
+
+.sidebar a {
+    color: lightgray;
+    text-decoration: none;
+}
+
+.sidebar a h1:hover {
+    color: white;
+}
+
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+.main-content h2 {
+    margin-top: 0;
+}
+
+#active {
+    color: white;
+}
+
+    </style> 
+</head> 
+<body> 
+    <nav>
+    <div class="container"> 
+        <nav>
+        <aside class="sidebar"> 
+            <a href="index.html"><h1>DigiConnect</h1></a>
+            <br><br>
+            <br><br>
+            <br><br>
+            <ul> 
+                <li><a href="Home.html">Home</a></li> 
+                <li><a href="Wallet.html">Wallet</a></li> 
+                <li><a href="Browse.html">Browse</a></li> 
+                <li><a href="Buy.html" id="active">Buy</a></li> 
+                <li><a href="Sell.html">Sell</a></li> 
+                <li><a href="Send.html">Send</a></li> 
+            </ul> 
+        </aside> 
+        </nav>

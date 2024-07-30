@@ -1,0 +1,289 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>DigiConnect Portfolio</title> 
+
+    <style>
+body {    
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1c063d;
+    color: #fff;
+    height:100%;
+}
+
+.container {
+    display: flex;
+    height:100%;
+}
+.sidebar {
+    width: 200px;
+    height: 1000px;
+    background-color: #6f6278;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+
+.sidebar ul li a {
+    margin: 40px ;
+    cursor: pointer;
+    display: block;
+    color: lightgray;
+    padding: 4px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.sidebar li a:hover {
+    color: white;
+}
+
+.sidebar a {
+    color: lightgray;
+    text-decoration: none;
+}
+
+.sidebar a h1:hover {
+    color: white;
+}
+
+#active {
+    color: white;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+.main-content h2 {
+    margin-top: 0;
+}
+
+
+.balance-section {
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-color: white;
+    border-style: solid;
+    border-radius: 1px;
+}
+
+
+.balance-section h3 {
+    margin: 0;
+}
+
+
+.balance-section p {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+
+.buttons button {
+    background-color: #4a1475;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    width: 150px;
+}
+
+
+.buttons button:hover {
+    background-color: #a577d4;
+}
+
+
+
+.transaction-history {
+    width: 100%;
+}
+
+.date-section {
+    margin-bottom: 40px;
+}
+
+.date-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.transaction {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    border-bottom: 1px solid #444;
+}
+
+
+.details {
+    flex-grow: 1;
+}
+
+.details .type {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.details .status {
+    color: green;
+    margin: 0;
+}
+
+.amount {
+    text-align: right;
+}
+
+.amount p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+    </style> 
+</head> 
+<body> 
+    <nav>
+    <div class="container"> 
+        <nav>
+        <aside class="sidebar"> 
+            <a href="index.html"><h1>DigiConnect</h1></a>
+            <br><br>
+            <br><br>
+            <br><br>
+            <ul> 
+                <li><a href="Home.html" id="active">Home</a></li> 
+                <li><a href="Wallet.html">Wallet</a></li> 
+                <li><a href="Browse.html">Browse</a></li> 
+                <li><a href="Buy.html">Buy</a></li> 
+                <li><a href="Sell.html">Sell</a></li> 
+                <li><a href="Send.html">Send</a></li> 
+            </ul> 
+        </aside> 
+        </nav>
+        
+        <main class="main-content"> 
+            <h2>Home</h2> 
+            <div class="balance-section"> 
+                <h3>Total Balance</h3> 
+                <p>S$ <span id="balance">572382.56</span></p> 
+                <div class="buttons"> 
+                    <a href="Buy.html"><button>Buy</button></a>
+                    <a href="Sell.html"><button>Sell</button></a> 
+                    <a href="TopUp.html"><button>Top-up</button> </a>
+                    <a href="Send.html"><button>Send</button></a>
+                </div> 
+            </div> 
+            <div class="activity-section" style="width: 100%"> 
+                <h3 style="margin: 0;">Activity</h3> 
+                <div class="transaction-history" >
+                    <div class="date-section">
+                        <h2>Jul 12, 2024</h2>
+                        <div class="transaction">
+                            <div class="icon send"></div>
+                            <div class="details">
+                                <p class="type">Send</p>
+                                <p class="status">Confirmed</p>
+                            </div>
+                            <div class="amount">
+                                <p>-0.015 BTC</p>
+                            </div>
+                        </div>
+                        <div class="transaction">
+                            <div class="icon send"></div>
+                            <div class="details">
+                                <p class="type">Send</p>
+                                <p class="status">Confirmed</p>
+                            </div>
+                            <div class="amount">
+                                <p>-0.0004564 BTC</p>
+                            </div>
+                        </div>
+                        <div class="transaction">
+                            <div class="icon receive"></div>
+                            <div class="details">
+                                <p class="type">Receive</p>
+                                <p class="status">Confirmed</p>
+                            </div>
+                            <div class="amount">
+                                <p>0.143525 BTC</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="date-section">
+                        <h2>May 31, 2024</h2>
+                        <div class="transaction">
+                            <div class="icon receive"></div>
+                            <div class="details">
+                                <p class="type">Receive</p>
+                                <p class="status">Confirmed</p>
+                            </div>
+                            <div class="amount">
+                                <p>5.90753 BTC</p>
+                            </div>
+                        </div>
+                        <div class="transaction">
+                            <div class="icon send"></div>
+                            <div class="details">
+                                <p class="type">Send</p>
+                                <p class="status">Confirmed</p>
+                            </div>
+                            <div class="amount">
+                                <p>-0.029274 BTC</p>
+                            </div>
+                        </div>
+                        <div class="transaction">
+                            <div class="icon send"></div>
+                            <div class="details">
+                                <p class="type">Send</p>
+                                <p class="status">Confirmed</p>
+                            </div>
+                            <div class="amount">
+                                <p>-0.89063 BTC</p>
+                            </div>
+                        </div>
+                        <div class="transaction">
+                            <div class="icon receive"></div>
+                            <div class="details">
+                                <p class="type">Receive</p>
+                                <p class="status">Confirmed</p>
+                            </div>
+                            <div class="amount">
+                                <p>1.56563 BTC</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </main> 
+    </div> 
+    <script src="script.js"></script>
+</body> 
+</html>
