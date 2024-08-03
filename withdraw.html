@@ -51,7 +51,6 @@
         color: white;
     }
 
-
     .sidebar a {
         color: lightgray;
         text-decoration: none;
@@ -60,6 +59,7 @@
     .sidebar a h1:hover {
         color: white;
     }
+
 
     .main-content {
         flex: 1;
@@ -154,21 +154,37 @@
         </nav>
 
             <main class="main-content top-up" > 
-                <h2>Top-up</h2>
-                <h3>Balance: S$ <span id="balance">0.00</span></h3>
+                <h2>Withdraw</h2>
+                <h3>Balance: S$ <span id="balance">180,000.00</span></h3>
                 <div class= "wallet-container">
                     <div class="wallet-row">
-                    <label for="name">Amount to Top-Up: </label>
+                    <label for="name">Amount to Withdraw: </label>
                     <input type="number" id="amount" name="amount" class = "amount" required><br><br>
                     </div>
                     <p> Bank Account No. : 123456789</p>
                 </div>
                 <div class="buttons">
-                <button id="confirm" onclick="confirmTopUp()">Confirm</button></a>
+                <button id="confirm" onclick="confirmWithdraw()">Confirm</button></a>
+                <a href="Wallet.html"><button>back</button></a>
                 </div>
             </main>
     </div>
-    <script src="script.js"></script>
+    <script>
+        function confirmWithdraw() {
+            let balanceElement = document.getElementById('balance');
+            let amountElement = document.getElementById('amount');
+            let currentBalance = parseFloat(balanceElement.textContent.replace(/,/g, ''));
+            let amountToWithdraw = parseFloat(amountElement.value);
+
+            if (!isNaN(amountToWithdraw) && amountToWithdraw > 0 && amountToWithdraw <= currentBalance) {
+                let newBalance = currentBalance - amountToWithdraw;
+                balanceElement.textContent = newBalance.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+                alert(`Successfully withdrawn S$${amountToWithdraw.toFixed(2)}`);
+            } else {
+                alert('Invalid withdrawal amount');
+            }
+        }
+    </script>
 
 </body>
 </html>

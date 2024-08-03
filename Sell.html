@@ -190,6 +190,9 @@ body {
     color: white;
 }
 
+button:hover {
+    background-color: rgb(255, 112, 112);
+}
 
 </style> 
 </head> 
@@ -235,15 +238,31 @@ body {
 
                     <div class="crypto-item">
                         <div class="crypto-info">
+                            <div class="crypto-name">Ethereum</div>
+                            <div class="crypto-price">S$572,382.56</div>
+                            <div class="crypto-change red">-4.65%</div>
+                        </div>
+                        <div class="crypto-chart"><button class="buybutton">Sell</button></div>
+                    </div>
+
+                    <div class="crypto-item" id="bitcoin-section">
+                        <div class="crypto-info">
                             <div class="crypto-name">Bitcoin</div>
                             <div class="crypto-price">S$841,080</div>
                             <div class="crypto-change red">-3.51%</div>
                         </div>
-                        <div class="crypto-chart"><a href="bitcoin.html"><button class="buybutton">Sell</button></a></div>
+                        <div class="crypto-chart"><button class="buybutton" onclick="sellBitcoin()">Sell</button></div>
                     </div>
             </div>
         </main>
     </div>
+
+    <script>
+        function sellBitcoin() {
+            document.getElementById('bitcoin-section').style.display = 'none';
+            alert("You have sold BTC")
+        }
+    </script>
 
 </body>
 </html>
