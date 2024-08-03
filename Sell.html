@@ -76,10 +76,124 @@ body {
     color: white;
 }
 
-    </style> 
+.balance-section {
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-color: white;
+    border-style: solid;
+    border-radius: 1px;
+}
+
+
+.balance-section h3 {
+    margin: 0;
+}
+
+
+.balance-section p {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+
+.wallet-container {
+    background-color: #4a006e;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    color: white;
+    width: 90%;
+    margin-left: 45px;
+}
+.wallet-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #5e008c;
+}
+.wallet-row:last-child {
+    border-bottom: none;
+}
+
+.second {
+    text-align: center;
+
+}
+
+.crypto-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.crypto-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #1c063d;
+    border-color: lightgrey;
+    border-style: solid;
+}
+
+.crypto-info {
+    display: flex;
+    flex-direction: column;
+    border-style: solid black;
+}
+
+.crypto-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.crypto-price {
+    font-size: 16px;
+    align-items: flex-end;
+}
+
+.crypto-change {
+    font-size: 14px;
+    align-items: flex-end;
+}
+
+.crypto-change.red {
+    color: #ff0000;
+}
+
+.crypto-change.green {
+    color: #00ff00;
+}
+
+.crypto-chart {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.crypto-chart.red {
+    background-color: #ff0000;
+}
+
+.crypto-chart.green {
+    background-color: #00ff00;
+}
+
+.buybutton {
+    border-radius: 10px;
+    width: 100px;
+    border: none;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+}
+
+
+</style> 
 </head> 
 <body> 
-    <nav>
     <div class="container"> 
         <nav>
         <aside class="sidebar"> 
@@ -92,7 +206,44 @@ body {
                 <li><a href="Wallet.html">Wallet</a></li> 
                 <li><a href="Buy.html">Buy</a></li> 
                 <li><a href="Sell.html" id="active">Sell</a></li> 
-                <li><a href="Send.html">Send</a></li> 
             </ul> 
         </aside> 
         </nav>
+
+        <main class="main-content"> 
+            <h2>Sell</h2> 
+            <div class="balance-section"> 
+                <h3>Total Balance</h3> 
+                <p>S$ 572382.56</p> 
+            </div>
+            <div class="wallet-container">
+                <div class="wallet-row">
+                    <div>Crypto assets:</div>
+                    <div>S$ 572382.56</div>
+                </div>
+                <div class="wallet-row">
+                    <div>Fiat wallet:</div>
+                    <div>S$ 0.00</div>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div class="second">
+                <h1>My Cryptocurrencies</h1>
+                <div class="crypto-list">
+
+                    <div class="crypto-item">
+                        <div class="crypto-info">
+                            <div class="crypto-name">Bitcoin</div>
+                            <div class="crypto-price">S$841,080</div>
+                            <div class="crypto-change red">-3.51%</div>
+                        </div>
+                        <div class="crypto-chart"><a href="bitcoin.html"><button class="buybutton">Sell</button></a></div>
+                    </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

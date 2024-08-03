@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Bitcoin</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 350px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+header .back-arrow, header .help-icon, header .close-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+header .title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+.amount-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.amount-section .amount {
+    font-size: 36px;
+    color: #007bff;
+}
+
+.amount-section .equivalent {
+    font-size: 16px;
+    color: #555;
+}
+
+.amount-section .amount-change {
+    font-size: 24px;
+    color: #007bff;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.buy-options {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.buy-options .buy-option {
+    padding: 10px 20px;
+    border: 1px solid #007bff;
+    background-color: #e7f0ff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #007bff;
+}
+
+.preset-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.preset-buttons button {
+    padding: 10px;
+    border: none;
+    background-color: #e7f0ff;
+    color: #007bff;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 23%;
+}
+
+.payment-tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.payment-tabs .tab {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.payment-tabs .tab.active {
+    border-bottom: 2px solid #007bff;
+    color: #007bff;
+}
+
+.wallet-section, .card-section {
+    margin-bottom: 20px;
+}
+
+.wallet-title, .card-title {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.wallet, .card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.wallet-name, .card-name {
+    font-size: 16px;
+}
+
+.wallet-balance, .card-limit {
+    font-size: 14px;
+    color: #555;
+}
+
+.add-payment-method {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.add-payment-method .add-method {
+    color: #007bff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+footer .buy-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <main>
+            <div class="amount-section">
+                <div class="amount">0.01 BTC</div>
+                <div class="equivalent">≈ $626.12 USD</div>
+                <div class="amount-change">&#8597;</div>
+            </div>
+            <div class="buy-options">
+                <button class="buy-option">One Time Buy &#9662;</button>
+            </div>
+            <div class="preset-buttons">
+                <button>$25</button>
+                <button>$100</button>
+                <button>$500</button>
+                <button>Max</button>
+            </div>
+            <div class="payment-tabs">
+                <div class="tab active">Cash</div>
+                <div class="tab">Crypto</div>
+            </div>
+            <div class="wallet-section">
+                <div class="wallet-title">FIAT WALLET</div>
+                <div class="wallet">
+                    <div class="wallet-name">SGD Wallet</div>
+                    <div class="wallet-balance">$0.00</div>
+                </div>
+            </div>
+            <div class="card-section">
+                <div class="card-title">CREDIT / DEBIT CARD</div>
+                <div class="card">
+                    <div class="card-name">Apple Pay</div>
+                    <div class="card-limit">$0.00 / $750.00 WEEKLY LIMIT</div>
+                </div>
+            </div>
+            <div class="add-payment-method">
+                <div class="add-method">+ Add Payment Method</div>
+            </div>
+        </main>
+        <footer>
+            <button class="buy-button">Buy 0.01 BTC</button>
+        </footer>
+    </div>
+</body>
+</html>

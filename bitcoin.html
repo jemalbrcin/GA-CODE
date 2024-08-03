@@ -1,0 +1,234 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>DigiConnect Portfolio</title> 
+
+<style>
+
+body {    
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1c063d;
+    color: #fff;
+    height:100%;
+}
+
+.container {
+    display: flex;
+    height:100%;
+}
+.sidebar {
+    width: 200px;
+    height: 1200px;
+    background-color: #6f6278;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+
+.sidebar ul li a {
+    margin: 40px ;
+    cursor: pointer;
+    display: block;
+    color: lightgray;
+    padding: 4px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.sidebar li a:hover {
+    color: white;
+}
+
+.sidebar a {
+    color: lightgray;
+    text-decoration: none;
+}
+
+.sidebar a h1:hover {
+    color: white;
+}
+
+
+.top {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+.top h2 {
+    margin-top: 0;
+}
+
+#active {
+    color: white;
+}
+
+.title {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+.name {
+    text-align: center;
+    font-size: 36px;
+}
+
+.value {
+    width: 70px;
+    height:40px;
+    background-color: #1c063d;
+    border-style: none;
+    font-size: 36px;
+    color: #fff;
+}
+
+.equivalent {
+    text-align: center;
+}
+
+.sdf {
+    text-align: center;
+}
+
+.select {
+    width: 200px;
+    font-size: 20px;
+    background-color: #6f6278;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.wallet-container {
+    background-color: #4a006e;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    color: white;
+    width: 90%;
+    margin-left: 45px;
+}
+
+.wallet-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #5e008c;
+}
+.wallet-row:last-child {
+    border-bottom: none;
+}
+
+button {
+    width: 200px;
+    font-size: 30px;
+    background-color: lightgrey;
+    border-radius: 10px;
+    border-style: none;
+}
+
+
+</style> 
+</head> 
+<body> 
+    <nav>
+    <div class="container"> 
+        <nav>
+        <aside class="sidebar"> 
+            <a href="index.html"><h1>DigiConnect</h1></a>
+            <br><br>
+            <br><br>
+            <br><br>
+            <ul> 
+                <li><a href="Home.html">Home</a></li> 
+                <li><a href="Wallet.html">Wallet</a></li> 
+                <li><a href="Buy.html" id="active">Buy</a></li> 
+                <li><a href="Sell.html">Sell</a></li> 
+            </ul> 
+        </aside> 
+        </nav>
+
+        <main class="top">
+            <div class="title"><h1>Bitcoin</h1></div>
+            <div class="name">
+                <input type="text" value="0.01" class="value" id="amount"> BTC
+            </div>
+            <div class="equivalent">≈ S$<span id="equivalent-amount">841.08 </span></div>
+
+            <br><br>
+
+            <div class="sdf">
+            <select class="select">
+                <option>One-Time Buy</option>
+                <option>Recurring Buy</option>
+                <option>Target Price</option>
+            </select>
+            </div>
+
+            <br><br>
+
+            <div class="wallet-container">
+                <div class="wallet-row">
+                    <div>Crypto assets:</div>
+                    <div>
+                        S$ 572,382.56
+                        <br>
+                        <span id="updatecrypto"></span>
+                    </div>
+                    
+                </div>
+                <div class="wallet-row">
+                    <div>Fiat wallet:</div>
+                    <div>
+                        S$ 90,000
+                        <br>
+                        <span id="updatefiat"></span>
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+            <br><br>
+            <br><br>
+
+            <button id="buybutton">Buy BTC</button>
+        
+        </main>
+
+
+
+
+
+<script>
+    document.getElementById("amount").addEventListener("input", function() {
+            let amount = parseFloat(document.getElementById("amount").value);
+            let rate = 84108.00;
+            let finalAmount = (amount * rate).toFixed(2);
+            document.getElementById("equivalent-amount").textContent = finalAmount;
+        });
+
+        document.getElementById("buybutton").addEventListener("click", function() {
+            alert("You have purchased BTC");
+        });
+
+</script>
+
+
+</body> 
+</html>

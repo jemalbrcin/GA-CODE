@@ -1,11 +1,12 @@
 <!DOCTYPE html> 
 <html lang="en"> 
 <head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>DigiConnect Portfolio</title> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>DigiConnect Portfolio</title> 
 
-    <style>
+<style>
+
 body {    
     margin: 0;
     font-family: Arial, sans-serif;
@@ -20,7 +21,7 @@ body {
 }
 .sidebar {
     width: 200px;
-    height: 1000px;
+    height: 1200px;
     background-color: #6f6278;
     padding: 20px;
     box-sizing: border-box;
@@ -76,7 +77,96 @@ body {
     color: white;
 }
 
-    </style> 
+.title {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+.crypto-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.crypto-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #1c063d;
+    border-color: lightgrey;
+    border-style: solid;
+}
+
+.crypto-info {
+    display: flex;
+    flex-direction: column;
+    border-style: solid black;
+}
+
+.crypto-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.crypto-price {
+    font-size: 16px;
+    align-items: flex-end;
+}
+
+.crypto-change {
+    font-size: 14px;
+    align-items: flex-end;
+}
+
+.crypto-change.red {
+    color: #ff0000;
+}
+
+.crypto-change.green {
+    color: #00ff00;
+}
+
+.crypto-chart {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.crypto-chart.red {
+    background-color: #ff0000;
+}
+
+.crypto-chart.green {
+    background-color: #00ff00;
+}
+
+.buybutton {
+    border-radius: 10px;
+    width: 100px;
+    border: none;
+    padding: 10px 20px;
+    background-color: lightgrey;
+}
+
+
+</style> 
 </head> 
 <body> 
     <nav>
@@ -92,7 +182,100 @@ body {
                 <li><a href="Wallet.html">Wallet</a></li> 
                 <li><a href="Buy.html" id="active">Buy</a></li> 
                 <li><a href="Sell.html">Sell</a></li> 
-                <li><a href="Send.html">Send</a></li> 
             </ul> 
         </aside> 
         </nav>
+
+        <main class="main-content">
+            <h2>Buy</h2>
+            <div class="title">Buy Cryptocurrency</div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="crypto-list">
+
+                <div class="crypto-item">
+                    <div class="crypto-info">
+                        <div class="crypto-name">Bitcoin</div>
+                        <div class="crypto-price">$62,571.50</div>
+                        <div class="crypto-change red">-3.51%</div>
+                    </div>
+                    <div class="crypto-chart"><a href="bitcoin.html"><button class="buybutton">Buy</button></a></div>
+                </div>
+
+                <div class="crypto-item">
+                    <div class="crypto-info">
+                        <div class="crypto-name">Ethereum</div>
+                        <div class="crypto-price">$3,0321.58</div>
+                        <div class="crypto-change red">-4.65%</div>
+                    </div>
+                    <div class="crypto-chart"><button class="buybutton">Buy</button></div>
+                </div>
+
+                <div class="crypto-item">
+                    <div class="crypto-info">
+                        <div class="crypto-name">Cronos</div>
+                        <div class="crypto-price">$0.08465</div>
+                        <div class="crypto-change red">-1.29%</div>
+                    </div>
+                    <div class="crypto-chart"><button class="buybutton">Buy</button></div>
+                </div>
+
+                <div class="crypto-item">
+                    <div class="crypto-info">
+                        <div class="crypto-name">Aelf</div>
+                        <div class="crypto-price">$0.4305</div>
+                        <div class="crypto-change green">+19.15%</div>
+                    </div>
+                    <div class="crypto-chart"><button class="buybutton">Buy</button></div>
+                </div>
+
+                <div class="crypto-item">
+                    <div class="crypto-info">
+                        <div class="crypto-name">MetaBeat</div>
+                        <div class="crypto-price">$0.00553</div>
+                        <div class="crypto-change red">+3.20%</div>
+                    </div>
+                    <div class="crypto-chart"><button class="buybutton">Buy</button></div>
+                </div>
+
+                <div class="crypto-item">
+                    <div class="crypto-info">
+                        <div class="crypto-name">SKALE</div>
+                        <div class="crypto-price">$0.05105</div>
+                        <div class="crypto-change green">+5.87%</div>
+                    </div>
+                    <div class="crypto-chart"><button class="buybutton">Buy</button></div>
+                </div>
+
+                <div class="crypto-item">
+                    <div class="crypto-info">
+                        <div class="crypto-name">Godecoin</div>
+                        <div class="crypto-price">$0.1177</div>
+                        <div class="crypto-change green">+0.19%</div>
+                    </div>
+                    <div class="crypto-chart"><button class="buybutton">Buy</button></div>
+                </div>
+
+                <div class="crypto-item">
+                    <div class="crypto-info">
+                        <div class="crypto-name">PEPE</div>
+                        <div class="crypto-price">$0.000009892</div>
+                        <div class="crypto-change red">-0.07%</div>
+                    </div>
+                    <div class="crypto-chart"><button class="buybutton">Buy</button></div>
+                </div>
+
+                <div class="crypto-item">
+                    <div class="crypto-info">
+                        <div class="crypto-name">Shiba Inu</div>
+                        <div class="crypto-price">$0.00001516</div>
+                        <div class="crypto-change red">-0.20%</div>
+                    </div>
+                    <div class="crypto-chart"><button class="buybutton">Buy</button></div>
+                </div>
+
+            </div>
+        </main>
+</body> 
+</html>
